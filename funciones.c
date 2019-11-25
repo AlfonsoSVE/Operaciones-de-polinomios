@@ -1,6 +1,6 @@
 #include "funciones.h"
 
-void scan_polinomio(polino a, polino b){
+void scan_polinomio(polino a){
   
 }
 
