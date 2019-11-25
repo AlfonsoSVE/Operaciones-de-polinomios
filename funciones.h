@@ -12,11 +12,12 @@ typedef struct polinomios polino;
 
 void scan_polinomio(polino a);
 void orden_poliniomio(polino *lista);
-void dividir(polino *numerador,polino *denominador);
-void multiplicar(polino *multiplicando ,polino *multiplicador,polino *producto);
-void restar(polino *minuendo, polino *sustraendo ,polino *diferencia);
-void compara(polino *polinomio1,polino *polinomio2 );
-void division_sintetica(polino *monomio, polino *polinomio);
+void suma(polino *a, polino *b);
+void dividir(polino *a,polino *b, polino *c);
+void multiplicar(polino *a ,polino *b,polino *c);
+void restar(polino *a, polino *b ,polino *c);
+void compara(polino *a,polino *b );
+void division_sintetica(polino *a, polino *b);
 void menu();
 void print_polinomio(polino a, polino b);
 
