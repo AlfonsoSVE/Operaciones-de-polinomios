@@ -42,52 +42,54 @@ void orden_polinomio(polino *lista){
   return *lista;
 }
 
+void suma(polino *a, polino *b){
+	
+}
 
+void dividir(polino *a,polino *b, polino *c){
 
-void dividir(polino *numerador,polino *denominador){
-
-polino *cociente,*sustraendo,*residuo,*apuntanum;
+polino *cociente,*sustraendo,*residuo,*c;
 int resultado;
 
 	while (numerador->siguiente!=NULL) {
 		while (denominador->siguiente!=NULL) {
-			compara(numerador,denominador,resultado);
-			if (resultado==1) {
+			resultado=compara(a,b);
+			if (c==1) {
 				if (numerador->exponente>=denominador->exponente) {
-					cociente=malloc(sizeof(polino));
+					cociente=(polino*)malloc(sizeof(polino));
 					cociente->coeficiente=numerador->coeficiente/denominador->coeficiente;
 					cociente->exponente=numerador->exponente-denominador->exponente;
-					multiplicar(cociente,denominador,sustraendo);
-					restar(numerador,sustraendo,residuo);
-					compara(residuo,denominador,resultado);
+					sustraendo=multiplicar(cociente,denominador,sustraendo);
+					residuo=restar(numerador,sustraendo,residuo);
+					resultado=compara(residuo,denominador,resultado);
 					if (resultado==1) {
 						numerador=residuo;
 					}
 					else{
 						printf("Resultado de la division\n");
-						apuntanum=cociente;
-           
+						c=cociente;
+						
 					}
 				}
 			}
 		}
 	}
 }
-  return apuntanum;
+  return c;
 }
 
 
 
-void multiplicar(polino *multiplicando ,polino *multiplicador,polino *producto){
+void multiplicar(polino *a ,polino *b,polino *c){
   
 }
-void restar(polino *minuendo, polino *sustraendo ,polino *diferencia){
+void restar(polino *a, polino *b ,polino *c){
   
 }
-void compara(polino *polinomio1,polino *polinomio2 ){
+void compara(polino *a,polino *b ){
 
 }
-void division_sintetica(polino *monomio, polino *polinomio){
+void division_sintetica(polino *a, polino *b){
   
 }
 void menu(){
