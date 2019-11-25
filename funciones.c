@@ -35,7 +35,7 @@ void orden_polinomio(polino *lista){
 			}
 			sig=sig->siguiente;
 		}
-		if (bandera=0)
+		if (bandera==0)
 			break;
 	}
 }
