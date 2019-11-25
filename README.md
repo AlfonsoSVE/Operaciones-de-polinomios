@@ -1,6 +1,6 @@
 # Operaciones-de-polinomios
 Proyecto de Fundamentos de Programacion Brigada 8.
 Loperena Jasso Jonathan Missael.
-Martinez David
+Martínez López Luis David
 Sánchez del Valle Escanero Alfonso.
-Vega Gutierrez Daniel Ricardo
+Vega Gutiérrez Daniel Ricardo
