@@ -8,24 +8,22 @@ void scan_polinomio(polino a){
 
 void orden_polinomio(polino *lista){
   void ordenpoli(polino *lista){
-	int numele,i,j;
+	int numelementos,i,j, na;
 	polino *cabeza,*inicio,*temp1,*temp2,*sig;
-	int bandera,aux;
-
+	int cambio ,aux;
+	
 	cabeza=lista;
-	numele=0;
-	while (lista->siguiente!=NULL) {
-		numele+=1;
-		lista=lista->siguiente;
+	numelementos=na;
+	
 	}
-	for (i=1;i<numele;i++) {
+	for (i=1;i<numelementos;i++) {
 		inicio=cabeza;
 		sig=inicio;
-		bandera=0;
-		for (j = 1; j <= numele-i; j++) {
+		cambio=0;
+		for (j = 1; j <= numelementos-i; j++) {
 			inicio=sig;
 			if (inicio->siguiente->exponente>inicio->exponente) {
-				bandera=1;
+				cambio=1;
 				aux=inicio->exponente;
 				inicio->exponente=inicio->siguiente->exponente;
 				inicio->siguiente->exponente=aux;
@@ -35,7 +33,7 @@ void orden_polinomio(polino *lista){
 			}
 			sig=sig->siguiente;
 		}
-		if (bandera==0)
+		if (cambio==0)
 			break;
 	}
 }
@@ -46,35 +44,38 @@ void suma(polino *a, polino *b){
 	
 }
 
-void dividir(polino *a,polino *b, polino *c){
+void dividir(polino *a,polino *b, polino *cociente){
 
-polino *cociente,*sustraendo,*residuo,*c;
-int resultado;
+	polino *header_b, *header_d, *header_c  *header_a, *Headerb_prima; 	
+	polino *b_prima,*d,*apuntador;
+	struct nomio factor;
+	int resultado;
+	int i,na,nb,nd;
 
-	while (numerador->siguiente!=NULL) {
-		while (denominador->siguiente!=NULL) {
-			resultado=compara(a,b);
-			if (c==1) {
-				if (numerador->exponente>=denominador->exponente) {
-					cociente=(polino*)malloc(sizeof(polino));
-					cociente->coeficiente=numerador->coeficiente/denominador->coeficiente;
-					cociente->exponente=numerador->exponente-denominador->exponente;
-					sustraendo=multiplicar(cociente,denominador,sustraendo);
-					residuo=restar(numerador,sustraendo,residuo);
-					resultado=compara(residuo,denominador,resultado);
-					if (resultado==1) {
-						numerador=residuo;
-					}
-					else{
-						printf("Resultado de la division\n");
-						c=cociente;
+		while (numerador->siguiente!=NULL) {
+			while (denominador->siguiente!=NULL) {
+				resultado=compara(a,b);
+				if (c==1) {
+					if (numerador->exponente>=denominador->exponente) {
+						cociente=(polino*)malloc(sizeof(polino));
+						cociente->coeficiente=numerador->coeficiente/denominador->coeficiente;
+						cociente->exponente=numerador->exponente-denominador->exponente;
+						sustraendo=multiplicar(cociente,denominador,sustraendo);
+						residuo=restar(numerador,sustraendo,residuo);
+						resultado=compara(residuo,denominador,resultado);
+						if (resultado==1) {
+							numerador=residuo;
+						}
+						else{
+							printf("Resultado de la division\n");
+							c=cociente;
 						
-					}
+						}
+					}	
 				}
 			}
 		}
 	}
-}
   return c;
 }
 
