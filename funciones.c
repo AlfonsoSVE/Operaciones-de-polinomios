@@ -48,7 +48,7 @@ void dividir(polino *a,polino *b, polino *cociente){
 
 	polino *header_a, *header_d, *header_c , *header_b, *Headera_prima; 	
 	polino *a_prima,*d,*apuntador;
-	struct nomio factor;
+	nomio factor;
 	int resultado;
 	int i,na,nb,nd, b_fin;
 	header_a=a;
