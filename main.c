@@ -2,38 +2,88 @@
 #include 'funciones.h'
 
 int main(){
-  polino *head1,*head2,*res;
-	int n1,n2,i,j,expo, op;
+  polino *heada,*headb,*res. *a, *b;
+	int n1,n2, a, b, i,j,expo, op;
 	float coef;
 
-
-	n1=void scan_polinomio(polino a);
-	n2=void scan_polinomio(polino a);
-	void orden_poliniomio(polino *lista);
 	do{
 		menu();
 		scanf("%d", &op);
 		switch(op){
 			case 1:
-				res= suma(a, b);
+				a=scan_polinomio(a);
+				a=orden_poliniomio(a);
+				guardar_archivo(a);
 				break;
-			case 2:
-				res=restar(a, b, c);
+			case 2: 
+				a=scan_polinomio(a);
+				a=orden_poliniomio(a);
+				guardar_archivo(a);
+				b=scan_polinomio(a);
+				b=orden_poliniomio(b);
+				guardar_archivo(b);
+				res= suma(a, b, c);
+				guardar_archivo(res);
 				break;
 			case 3:
-				res=multiplicar(a, b, c);
+				a=scan_polinomio(a);
+				a=orden_poliniomio(a);
+				guardar_archivo(a);
+				b=scan_polinomio(a);
+				b=orden_poliniomio(b);
+				guardar_archivo(b);
+				res=restar(a, b, c);
+				guardar_archivo(res);
 				break;
 			case 4:
-				res= dividir(a, b, c);
+				a=scan_polinomio(a);
+				a=orden_poliniomio(a);
+				guardar_archivo(a);
+				b=scan_polinomio(a);
+				b=orden_poliniomio(b);
+				guardar_archivo(b);
+				res=multiplicar(a, b, c);
+				guardar_archivo(res);
 				break;
 			case 5:
-				res=division_sintetica(a, b);
+				a=scan_polinomio(a);
+				a=orden_poliniomio(a);
+				guardar_archivo(a);
+				b=scan_polinomio(a);
+				b=orden_poliniomio(b);
+				guardar_archivo(b);
+				res= dividir(a, b, c);
+				guardar_archivo(res);
 				break;
 			case 6:
+				a=scan_polinomio(a);
+				a=orden_poliniomio(a);
+				guardar_archivo(a);
+				b=scan_polinomio(a);
+				b=orden_poliniomio(b);
+				guardar_archivo(b);
+				res= dividir(a, b, c);
+				guardar_archivo(res);
+				break;
+			case 7:
+				a=scan_polinomio(a);
+				orden_poliniomio(a);
+				guardar_archivo(a);
+				print_polinomio(a);
+			case 8:
+				a=scan_polinomio(a);
+				orden_poliniomio(a);
+				guardar_archivo(a);
+				break;
+			case 9:
+				abrir_archivo(polinos);
+				break;
+			case 10:
 				printf("Goodbye\n");
 				break;
 			default:
 				printf("Opcion no valido\n");
 		}
 		print_polinomio(a)=res;
+		borrar_polino(res);
 	}while(op<7);
