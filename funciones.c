@@ -143,8 +143,13 @@ void division_sintetica(polino *a, polino *b){
 void menu(){
   
 }
-polino print_polinomio(polino a, polino b){
-  
+polino print_polinomio(polino *a)
+{
+ 	while (apuntador->siguiente!=NULL) {
+		if (apuntador->coeficiente!=0)
+			printf("%.2f x %d\n",apuntador->coeficiente,apuntador->exponente);
+		apuntador=apuntador->siguiente;
+	}
   
 }
 
