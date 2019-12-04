@@ -6,7 +6,7 @@ struct polinomios{
 	int exponente;
 	polino *siguiente;
 };
-
+typedef struct monomio nomio;
 struct monomio{
 	float coeficiente;
 	int exponente;
