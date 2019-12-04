@@ -145,10 +145,10 @@ void menu(){
 }
 polino print_polinomio(polino *a)
 {
- 	while (apuntador->siguiente!=NULL) {
-		if (apuntador->coeficiente!=0)
-			printf("%.2f x %d\n",apuntador->coeficiente,apuntador->exponente);
-		apuntador=apuntador->siguiente;
+ 	while (a->siguiente!=NULL) {
+		if (a->coeficiente!=0)
+			printf("%.2f x %d\n",a->coeficiente,a->exponente);
+		a=a->siguiente;
 	}
   
 }
