@@ -141,6 +141,7 @@ void division_sintetica(polino *a, polino *b){
   
 }
 void menu(){
+	printf(" 1 es leer un polinomio\n 2 es sumar polinomios\n 3 es restar polinomios\n 4 es multiplicar polinomios\n 5 es division sintetica\n 6 es division entre polinomios\n 7 es imprimir un polinomio\n 8 es guardar polinomios\n 9 es el historial de tus polinomios\n 10 es salir del programa\n");
   
 }
 polino print_polinomio(polino *a)
