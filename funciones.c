@@ -48,6 +48,41 @@ void orden_polinomio(polino *lista){
 }
 
 void suma(polino *a, polino *b){
+struct Polinomio
+{
+   float *p;
+   int grado;
+}; //no se si este en este proyecto vaya hasta ariiba lo de las struct 
+	struct Polinomio suma(struct Polinomio* a, struct Polinomio* b)
+	 
+{
+   int i;
+   struct Polinomio s;
+  
+   s.grado = a->grado;
+   if( b->grado > a->grado ) s.grado = b->grado; //hace una comparacion 
+   
+   s.p = malloc( (s.grado+1) * sizeof *s.p ); //crea espacio de memoria 
+
+   for(i = 0; i <= a->grado; i++) // cuando a sea mayor o igual se le va agregando uno 
+      s.p[i] = a->p[i]; //lo almacena en i 
+   for(i = 0; i <= b->grado; i++)// lo mismo que el anterior 
+      s.p[i] += b->p[i]; //lo almacena en i
+
+   return s; //retorna el valor de la total de la suma 
+}
+
+void muestra_polinomio(struct Polinomio* pol )
+{
+   int i;
+   int x;
+   printf("El grado del polinomio es %d\n", pol->grado );
+   printf("Los coeficientes correspondientes a los grados de 0 termino independiente  hasta %d, respectivamente son:\n", pol->grado);
+   for( i = 0; i < pol->grado; i++ ) //va aumentando del 0 hasta el valor que puso el usuario
+      printf("%4.2f, ", pol->p[i] ); // lo va imprimiento como va saliendo 
+   printf("%4.2f" , pol->p[i] );
+   putchar('\n');
+}
 	
 }
 
@@ -146,7 +181,26 @@ void multiplicar(polino *a ,polino *b,polino *c){
   
 }
 void restar(polino *a, polino *b ,polino *c){
+// para hacer la resta ocupe la misma estructura de la suma digan como le hacemos en esta parte {
+   int i;
+   struct Polinomio r;
   
+   r.grado = a->grado;
+   if( b->grado > a->grado ) r.grado = b->grado;
+   
+   r.p = malloc( (r.grado+1) * sizeof *r.p );
+
+   for(i = 0; i <= a->grado; i++)
+      r.p[i] = a->p[i];
+   for(i = 0; i <= b->grado; i++)
+      r.p[i] -= b->p[i];
+      
+       
+          
+    
+      
+   return  r;
+}
 }
 void compara(polino *a,polino *b ){
 
