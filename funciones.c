@@ -5,9 +5,16 @@ void scan_polinomio(polino a){
 }
 
 
-
+int cuenta(polino *a){
+	int total;
+	while(a->siguiente!=NULL){
+		total++;
+		a=a->siguiente;
+	}
+	return total;
+}
+	
 void orden_polinomio(polino *lista){
-  void ordenpoli(polino *lista){
 	int numelementos,i,j, na;
 	polino *cabeza,*inicio,*temp1,*temp2,*sig;
 	int cambio ,aux;
