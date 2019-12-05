@@ -132,7 +132,14 @@ void dividir(polino *a,polino *b, polino *cociente){
 		restar(a,a_prima, d);
 		a=d;
 	}
-	return header_d, header_c; 
+	cociente=header_c;
+	d=header_d;
+	while (d->siguiente!=NULL) {
+		if (d->coeficiente!=0)
+			printf("El residuo es %.2f x %d\n",d->coeficiente,d->exponente);
+		d=d->siguiente;
+	}
+	return cociente; 
 }
 
 void multiplicar(polino *a ,polino *b,polino *c){
