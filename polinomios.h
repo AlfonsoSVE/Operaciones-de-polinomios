@@ -11,3 +11,8 @@ struct monomio{
 	float coeficiente;
 	int exponente;
 };
+struct Polinomio
+{
+   float *p;
+   int grado;
+};
