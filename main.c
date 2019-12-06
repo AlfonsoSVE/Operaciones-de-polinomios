@@ -7,6 +7,7 @@ int main(){
 	float coef;
 
 	do{
+		crear_archivo(a);
 		menu();
 		scanf("%d", &op);
 		switch(op){
