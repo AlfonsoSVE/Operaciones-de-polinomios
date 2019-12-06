@@ -87,6 +87,6 @@ int main(){
 		}
 		print_polinomio(a)=res;
 		borrar_polino(res);
-	}while(op<11);
+	}while(op<10);
 	resturn 0;
 }
