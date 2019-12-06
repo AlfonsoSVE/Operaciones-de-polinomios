@@ -174,11 +174,27 @@ void dividir(polino *a,polino *b, polino *cociente){
 			printf("El residuo es %.2f x %d\n",d->coeficiente,d->exponente);
 		d=d->siguiente;
 	}
-	return cociente; 
-}
+	return cociente;io
+multiplicaion(  struct Polinomio* a, struct Polinomio* b)
+		{
+   int i,j,k ,l;
+   int h=0;
+   struct Polinomio m;
+   m.grado = a->grado + b->grado;
+   if( b->grado > a->grado ) m.grado = b->grado;
+   
+   m.p = malloc( (m.grado+1) * sizeof *m.p );
 
-void multiplicar(polino *a ,polino *b,polino *c){
-  
+   for(i=0;i<=m.grado;i++)
+   
+       for(j=0;j<=a->grado;j++)
+                m.p[j] = a->p[j];
+               for(k=0;i<=b->grado;k++) 
+                m.p[k] = a->p[k];
+			   m.p[j+k] += a->p[j] * b->p[k];
+}
+    return m.p;
+}
 }
 void restar(polino *a, polino *b ,polino *c){
 // para hacer la resta ocupe la misma estructura de la suma digan como le hacemos en esta parte {
