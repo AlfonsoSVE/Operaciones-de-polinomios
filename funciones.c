@@ -47,13 +47,7 @@ void orden_polinomio(polino *lista){
   return *lista;
 }
 
-void suma(polino *a, polino *b){
-struct Polinomio
-{
-   float *p;
-   int grado;
-}; //no se si este en este proyecto vaya hasta ariiba lo de las struct 
-	struct Polinomio suma(struct Polinomio* a, struct Polinomio* b)
+struct Polinomio suma(struct Polinomio* a, struct Polinomio* b)
 	 
 {
    int i;
@@ -179,7 +173,7 @@ void dividir(polino *a,polino *b, polino *cociente){
 
 void multiplicar(polino *a ,polino *b,polino *c){
   
-}
+
 void restar(polino *a, polino *b ,polino *c){
 // para hacer la resta ocupe la misma estructura de la suma digan como le hacemos en esta parte {
    int i;
@@ -194,10 +188,7 @@ void restar(polino *a, polino *b ,polino *c){
       r.p[i] = a->p[i];
    for(i = 0; i <= b->grado; i++)
       r.p[i] -= b->p[i];
-      
-       
           
-    
       
    return  r;
 }
