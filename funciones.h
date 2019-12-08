@@ -13,8 +13,9 @@ void restar(polino *a, polino *b ,polino *c);
 void menu();
 void print_polinomio(polino *a);
 int cuenta(polino *a);
-guardar_archivo(a);
-abrir_archivo(polinos);
+FILE crear_archivo(polino *a);
+FILE guardar_archivo(polino *a);
+FILE abrir_archivo(polino *polinomios);
 
 
 #endif
