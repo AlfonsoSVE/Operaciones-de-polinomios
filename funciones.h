@@ -8,6 +8,7 @@ void scan_polinomio(polino a);
 void orden_poliniomio(polino *lista);
 void suma(polino *a, polino *b);
 void dividir(polino *a,polino *b, polino *c);
+void division_sintetica(polino *a, monomio b, polino *c);
 void multiplicar(polino *a ,polino *b,polino *c);
 void restar(polino *a, polino *b ,polino *c);
 void menu();
