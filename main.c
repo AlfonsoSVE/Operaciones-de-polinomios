@@ -50,10 +50,9 @@ int main(){
 				a=scan_polinomio(a);
 				a=orden_poliniomio(a);
 				guardar_archivo(a);
-				b=scan_polinomio(a);
-				b=orden_poliniomio(b);
+				b=scan_monomio(a);
 				guardar_archivo(b);
-				res= dividir(a, b, c);
+				res=division_sintetica(a, b, c);
 				guardar_archivo(res);
 				break;
 			case 6:
