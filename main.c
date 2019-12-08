@@ -1,5 +1,5 @@
 #include <stdio.h>
-#include 'funciones.h'
+#include "funciones.h"
 
 int main(){
   polino *heada,*headb,*res. *a, *b;
