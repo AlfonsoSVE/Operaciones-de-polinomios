@@ -3,7 +3,7 @@
 
 int main(){
   polino *heada,*headb,*res. *a, *b;
-	int n1,n2, a, b, i,j,expo, op;
+	int na,nb ,nc ,expo, op;
 	float coef;
 
 	do{
@@ -58,6 +58,7 @@ int main(){
 				break;
 			case 6:
 				a=scan_polinomio(a);
+				na=cuenta(a);
 				a=orden_poliniomio(a);
 				guardar_archivo(a);
 				b=scan_polinomio(a);
@@ -77,7 +78,7 @@ int main(){
 				guardar_archivo(a);
 				break;
 			case 9:
-				abrir_archivo(polinos);
+				abrir_archivo(polinomios);
 				break;
 			case 10:
 				printf("Goodbye\n");
