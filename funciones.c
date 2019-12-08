@@ -231,7 +231,7 @@ polino print_polinomio(polino *a)
 {
  	while (a->siguiente!=NULL) {
 		if (a->coeficiente!=0)
-			printf("%.2f x %d\n",a->coeficiente,a->exponente);
+			printf("%.2f x ^ %d\n",a->coeficiente,a->exponente);
 		a=a->siguiente;
 	}
   
