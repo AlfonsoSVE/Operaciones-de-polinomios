@@ -22,7 +22,7 @@ void scan_polinomio(polino a){
 			salir=1;
 		}
 	}while(salir!=1);  
-	return *apuntador;
+	a=apuntador;
 }
 
 
