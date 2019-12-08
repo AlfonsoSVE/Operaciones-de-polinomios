@@ -1,7 +1,28 @@
 #include "funciones.h"
 
 void scan_polinomio(polino a){
-  
+	int expo;
+	int salir;
+	char respuesta;
+	float coef;
+	polino *apuntador, *header_a;
+	salir=0;
+	header_a=(polino*)malloc(sizeof(polino));
+	apuntador=header_a;
+	do{
+		printf("Escribe el coeficiente un espacio y el exponente\n");	
+		scanf("%f %d", &coef, &expo);
+		apuntador->coeficiente=coef;
+		apuntador->exponente=expo;
+		apuntador->siguiente=(*polino)malloc(sizeof(polino));
+		apuntador=apuntador->siguiente;
+		printf("¿Desea agregar otro monomio? S/N\n");
+		scanf(" %c",&respuesta);
+		if ((respuesta=='N') || (respuesta=='n')){
+			salir=1;
+		}
+	}while(salir!=1);  
+	return *apuntador;
 }
 
 
@@ -18,7 +39,7 @@ void orden_polinomio(polino *lista){
 	int numelementos,i,j, na;
 	polino *cabeza,*inicio,*temp1,*temp2,*sig;
 	int cambio ,aux;
-	
+	na=cuenta(*a);
 	cabeza=lista;
 	numelementos=na;
 	
