@@ -35,7 +35,7 @@ int cuenta(polino *a){
 	return total;
 }
 	
-void orden_polinomio(polino *lista){
+void orden_polinomio(polino *a){
 	int numelementos,i,j, na;
 	polino *cabeza,*inicio,*temp1,*temp2,*sig;
 	int cambio ,aux;
