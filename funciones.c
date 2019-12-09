@@ -195,7 +195,7 @@ void dividir(polino *a,polino *b, polino *cociente){
 
 void multiplicar(polino *a ,polino *b,polino *c){
   
-
+}
 void restar(polino *a, polino *b ,polino *c){
 // para hacer la resta ocupe la misma estructura de la suma digan como le hacemos en esta parte {
    int i;
@@ -219,6 +219,7 @@ void menu(){
 	printf(" 1 es leer un polinomio\n 2 es sumar polinomios\n 3 es restar polinomios\n 4 es multiplicar polinomios\n 5 es division sintetica\n 6 es division entre polinomios\n 7 es imprimir un polinomio\n 8 es guardar polinomios\n 9 es el historial de tus polinomios\n 10 es salir del programa\n");
   
 }
+	
 polino print_polinomio(polino *a)
 {
  	while (a->siguiente!=NULL) {
@@ -228,4 +229,16 @@ polino print_polinomio(polino *a)
 	}
   
 }
+
+
+
+
+void borrar_polino(polino *a){
+	if(a->siguiente!=NULL){
+		borrar_polino(a->siguiente;
+	}
+	free (n)
+}
+	
+
 
