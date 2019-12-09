@@ -88,7 +88,7 @@ struct Polinomio suma(struct Polinomio* a, struct Polinomio* b)
    return s; //retorna el valor de la total de la suma 
 }
 
-void muestra_polinomio(struct Polinomio* pol )
+/*void muestra_polinomio(struct Polinomio* pol )
 {
    int i;
    int x;
@@ -99,7 +99,7 @@ void muestra_polinomio(struct Polinomio* pol )
    printf("%4.2f" , pol->p[i] );
    putchar('\n');
 }
-	
+*/	
 }
 
 void dividir(polino *a,polino *b, polino *cociente){
