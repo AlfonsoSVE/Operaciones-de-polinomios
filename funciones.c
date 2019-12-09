@@ -210,9 +210,44 @@ void scan_monomio(int a){
                 scanf("%d",&a);
                 q[0] = poly[0];
 }
-void multiplicar(polino *a ,polino *b,polino *c){
-  
+void multiplicar(polino *a ,polino *b){
+	int i, j, n, tab[][];
+	Termino *ter = (Termino *)(a->cab->dato);
+	NodoL *nvo = 0;
+	if (!ter) return creaPolinomio(0, nvo, 1);
+	n = ter->coefi;
+	int tab[2][n + 1], cnt = 0;
+	for (nvo = b->cab; nvo; nvo = nvo->sig, cnt++);
+	if (cnt != 2) return creaPolinomio(0, b->cab, 1);
+
+	Termino *ta = (Termino *)b->cab->dato;
+	Termino *tb = (Termino *)b->cab->sig->dato;
+
+	NodoL *rsp = 0;
+
+	if (n == 1) {
+		return copiaPolinomio(p);
+	}
+	else {
+		for (i = 0; i < n + 1; ++i) {
+			for (j = 0; j <= i; ++j) {
+				if (j == 0 || j == i) tab[i % 2][j] = 1;
+				else if ((j - 1) >= 0)
+					tab[i % 2][j] = tab[(i + 1) % 2][j] + tab[(i + 1) % 2][j - 1];
+			}
+		}
+
+		for (j = 0; j <= n; ++j) {
+			int mult = tab[(i + 1) % 2][j];
+			Termino *nvot = multiplicaTermino(elevaTermino(ta, n - j), elevaTermino(tb, j));
+			nvot->coefi = nvot->coefi * mult;
+			insertaOrdA((void *)nvot, &rsp, cmpTermino);
+		}
+	}
+
+	return creaPolinomio(0, rsp, 1);
 }
+
 void restar(polino *a, polino *b ,polino *c){
 // para hacer la resta ocupe la misma estructura de la suma digan como le hacemos en esta parte {
    int i;
