@@ -23,6 +23,7 @@ void scan_polinomio(polino a){
 		}
 	}while(salir!=1);  
 	a=apuntador;
+	a=orden_polinomio(a);
 }
 
 
