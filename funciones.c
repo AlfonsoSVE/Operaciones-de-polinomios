@@ -192,7 +192,24 @@ void dividir(polino *a,polino *b, polino *cociente){
 	}
 	return cociente; 
 }
+void division_sintetica(polino *a, int b, polino *c){
+	int poly[6], na, q[6], i;
+	for(i=1;i<=na;i++){
+                                q[i] = (q[i-1]*a)+poly[i];
+                }
 
+                printf("\n Los coeficientes del cociente son: \n");
+                for(i=0;i<na;i++){
+                                printf("\t%d",q[i]);
+                }
+                printf("\n El residuo es: %d", q[na]);
+}
+void scan_monomio(int a){
+	int poly[6], q[6];
+	 printf("\n Ingrese el valor de la constante en (x-n) : ");
+                scanf("%d",&a);
+                q[0] = poly[0];
+}
 void multiplicar(polino *a ,polino *b,polino *c){
   
 }
