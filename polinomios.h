@@ -14,11 +14,6 @@ struct nomio{
 	int exponente;
 };
 
-typedef struct _monomio monomio;
-struct monomio{
-	char x;
-	int n;
-}
 struct Polinomio
 {
    float *p;
