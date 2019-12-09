@@ -1,7 +1,7 @@
 #ifdef 	FUNCIONES_H
 #define FUNCIONES_H
 
-#include <stdio.h>
+
 #include "polinomios.h"
 
 void scan_polinomio(polino *a);
